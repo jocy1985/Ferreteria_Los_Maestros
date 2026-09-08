@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <meta name="description" content="Área de cliente y contratista de Ferretería Los Maestros.">
+    <title>Área cliente | Ferretería Los Maestros</title>
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido-principal">Saltar al contenido principal</a>
+    <header class="cabecera-sitio">
+        <div class="contenedor cabecera-interior">
+            <a class="marca" href="index.html"><span>Ferretería Los Maestros</span></a>
+            <button id="boton-menu" class="boton-menu" type="button" aria-label="Abrir o cerrar menú" aria-controls="menu-principal" aria-expanded="false">☰</button>
+            <nav id="menu-principal" class="menu" aria-label="Área cliente">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="carrito.html">Mi pedido <span id="contador-carrito" class="contador-carrito">0</span></a>
+                <a href="panel-cliente.html" aria-current="page">Mi cuenta</a>
+            </nav>
+        </div>
+    </header>
+    <main id="contenido-principal" class="contenedor">
+        <header class="encabezado-pagina">
+            <p class="etiqueta">Cliente / Contratista</p>
+            <h1>Mi cuenta</h1>
+            <p>Consulta tu pedido activo, revisa tu historial y visualiza la información de tu cuenta.</p>
+        </header>
+        <section aria-labelledby="titulo-resumen-cliente">
+            <h2 id="titulo-resumen-cliente">Resumen</h2>
+            <div class="rejilla-resumen">
+                <article class="tarjeta-resumen"><span class="dato-grande">1</span><h3>Pedido activo</h3><p>Pedido #1048 en preparación.</p></article>
+                <article class="tarjeta-resumen"><span class="dato-grande">3</span><h3>Compras recientes</h3><p>Últimas compras registradas.</p></article>
+                <article class="tarjeta-resumen"><span class="dato-grande">$84.500</span><h3>Cuenta corriente</h3><p>Saldo pendiente para contratista habilitado.</p></article>
+            </div>
+        </section>
+        <section class="seccion" aria-labelledby="titulo-pedidos-cliente">
+            <h2 id="titulo-pedidos-cliente">Mis pedidos</h2>
+            <div class="tabla-contenedor">
+                <table>
+                    <caption>Pedidos recientes</caption>
+                    <thead><tr><th scope="col">Pedido</th><th scope="col">Fecha</th><th scope="col">Total</th><th scope="col">Estado</th></tr></thead>
+                    <tbody>
+                        <tr><td>#1048</td><td>05-09-2026</td><td>$42.970</td><td><span class="estado estado-proceso">En preparación</span></td></tr>
+                        <tr><td>#1032</td><td>29-08-2026</td><td>$67.400</td><td><span class="estado estado-listo">Entregado</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="seccion" aria-labelledby="titulo-cuenta-corriente">
+            <h2 id="titulo-cuenta-corriente">Cuenta corriente</h2>
+            <article class="tarjeta">
+                <p><strong>Disponible solo para contratistas autorizados.</strong></p>
+                <p>Saldo pendiente: <strong>$84.500</strong></p>
+                <p>Próximo cierre: fin de mes.</p>
+                <p class="texto-suave">Revisa tu saldo pendiente y la fecha estimada de cierre para mantener tus pagos al día.</p>
+            </article>
+        </section>
+    </main>
+    <footer class="pie-sitio"><div class="contenedor"><p>Ferretería Los Maestros · Área cliente.</p></div></footer>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
