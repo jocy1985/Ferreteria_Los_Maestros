@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vista de inventario para empleados de Ferretería Los Maestros.">
+    <title>Inventario | Ferretería Los Maestros</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido-principal">Saltar al contenido principal</a>
+    <header class="cabecera-sitio">
+        <div class="contenedor cabecera-interior">
+            <a class="marca" href="index.html"><span>Ferretería Los Maestros</span></a>
+            <button id="boton-menu" class="boton-menu" type="button" aria-label="Abrir o cerrar menú principal" aria-controls="menu-principal" aria-expanded="false">☰</button>
+            <nav id="menu-principal" class="menu" aria-label="Navegación de empleado">
+                <a href="panel-empleado.html">Panel empleado</a>
+                <a href="inventario.html" aria-current="page">Inventario</a>
+                <a href="index.html">Ir al sitio público</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido-principal" class="contenedor">
+        <header class="encabezado-pagina">
+            <p class="etiqueta">Vista de empleado</p>
+            <h1>Inventario</h1>
+            <p>Consulta el stock disponible y detecta los productos que requieren reposición.</p>
+        </header>
+
+
+        <section aria-labelledby="titulo-buscar-inventario">
+            <h2 id="titulo-buscar-inventario">Consultar inventario</h2>
+            <div class="campo-filtro">
+                <label for="buscar-inventario">Buscar por código, producto o categoría</label>
+                <input id="buscar-inventario" type="search" placeholder="Ejemplo: herramientas">
+            </div>
+            <p id="mensaje-inventario" class="mensaje-estado" role="status"></p>
+
+            <div class="tabla-contenedor" tabindex="0" aria-label="Tabla de inventario desplazable horizontalmente">
+                <table>
+                    <caption>Stock de productos</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Mínimo</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-inventario"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-sitio"><div class="contenedor"><p>Ferretería Los Maestros · Inventario.</p></div></footer>
+
+    <script src="assets/js/datos.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/inventario.js"></script>
+</body>
+</html>
