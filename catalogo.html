@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de productos de Ferretería Los Maestros con precio y stock disponible.">
+    <title>Catálogo | Ferretería Los Maestros</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido-principal">Saltar al contenido principal</a>
+    <header class="cabecera-sitio">
+        <div class="contenedor cabecera-interior">
+            <a class="marca" href="index.html"><span>Ferretería Los Maestros</span></a>
+            <button id="boton-menu" class="boton-menu" type="button" aria-label="Abrir o cerrar menú principal" aria-controls="menu-principal" aria-expanded="false">☰</button>
+            <nav id="menu-principal" class="menu" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html" aria-current="page">Catálogo</a>
+                <a href="carrito.html">Mi pedido <span id="contador-carrito" class="contador-carrito">0</span></a>
+                <a href="registro.html">Registro/Inicio de sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido-principal" class="contenedor">
+        <header class="encabezado-pagina">
+            <p class="etiqueta">10 productos disponibles</p>
+            <h1>Catálogo</h1>
+            <p>Busca un producto, revisa el stock y agrégalo a tu pedido.</p>
+        </header>
+
+        <section aria-labelledby="titulo-filtros">
+            <h2 id="titulo-filtros">Buscar productos</h2>
+            <div class="filtros">
+                <div class="campo-filtro">
+                    <label for="buscar-producto">Nombre, marca o código</label>
+                    <input id="buscar-producto" type="search" placeholder="Ejemplo: cemento">
+                </div>
+                <div class="campo-filtro">
+                    <label for="categoria-producto">Categoría</label>
+                    <select id="categoria-producto">
+                        <option value="Todas">Todas</option>
+                        <option value="Construcción">Construcción</option>
+                        <option value="Pinturas">Pinturas</option>
+                        <option value="Herramientas">Herramientas</option>
+                        <option value="Herramientas eléctricas">Herramientas eléctricas</option>
+                        <option value="Gasfitería">Gasfitería</option>
+                        <option value="Electricidad">Electricidad</option>
+                        <option value="Ferretería general">Ferretería general</option>
+                        <option value="Seguridad">Seguridad</option>
+                    </select>
+                </div>
+            </div>
+            <p id="mensaje-catalogo" class="mensaje-estado" role="status"></p>
+        </section>
+
+        <section id="catalogo-productos" class="rejilla-productos" aria-label="Listado de productos" aria-live="polite"></section>
+    </main>
+
+    <footer class="pie-sitio">
+        <div class="contenedor pie-contenido">
+            <div><strong>Ferretería Los Maestros</strong><p>Catálogo de productos y stock disponible.</p></div>
+            <div><strong>Ayuda</strong><p><a href="carrito.html">Revisar mi pedido</a></p></div>
+            <div><strong>Inicio</strong><p><a href="index.html">Volver a portada</a></p></div>
+        </div>
+    </footer>
+
+    <script src="assets/js/datos.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/catalogo.js"></script>
+</body>
+</html>
