@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confirma retiro o despacho de un pedido en Ferretería Los Maestros.">
+    <title>Finalizar pedido | Ferretería Los Maestros</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido-principal">Saltar al contenido principal</a>
+    <header class="cabecera-sitio">
+        <div class="contenedor cabecera-interior">
+            <a class="marca" href="index.html"><span>Ferretería Los Maestros</span></a>
+            <button id="boton-menu" class="boton-menu" type="button" aria-label="Abrir o cerrar menú principal" aria-controls="menu-principal" aria-expanded="false">☰</button>
+            <nav id="menu-principal" class="menu" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="carrito.html" aria-current="page">Mi pedido <span id="contador-carrito" class="contador-carrito">0</span></a>
+                <a href="registro.html">Registro/Inicio de sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido-principal" class="contenedor">
+        <header class="encabezado-pagina">
+            <p class="etiqueta">Último paso</p>
+            <h1>Finalizar pedido</h1>
+            <p>Indica quién recibirá el pedido y elige retiro en tienda o despacho.</p>
+        </header>
+
+        <div class="distribucion-pedido">
+            <form id="formulario-pedido" class="formulario" novalidate>
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+                    <div class="campo-formulario">
+                        <label for="nombre-pedido">Nombre</label>
+                        <input id="nombre-pedido" name="nombre" type="text" aria-describedby="error-nombre-pedido">
+                        <small id="error-nombre-pedido" class="mensaje-error"></small>
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="correo-pedido">Correo electrónico</label>
+                        <input id="correo-pedido" name="correo" type="email" placeholder="ejemplo@correo.cl" aria-describedby="error-correo-pedido">
+                        <small id="error-correo-pedido" class="mensaje-error"></small>
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="telefono-pedido">Celular</label>
+                        <input id="telefono-pedido" name="telefono" type="tel" maxlength="9" placeholder="912345678" aria-describedby="error-telefono-pedido">
+                        <small id="error-telefono-pedido" class="mensaje-error"></small>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Forma de entrega</legend>
+                    <label class="opcion-formulario"><input type="radio" name="entrega" value="Retiro"> Retiro en tienda</label>
+                    <label class="opcion-formulario"><input type="radio" name="entrega" value="Despacho"> Despacho a domicilio</label>
+                    <small id="error-entrega" class="mensaje-error"></small>
+
+                    <div id="bloque-direccion" class="campo-formulario" hidden>
+                        <label for="direccion-pedido">Dirección de despacho</label>
+                        <input id="direccion-pedido" name="direccion" type="text" aria-describedby="error-direccion-pedido">
+                        <small id="error-direccion-pedido" class="mensaje-error"></small>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="observaciones-pedido">Observaciones</label>
+                        <textarea id="observaciones-pedido" name="observaciones" maxlength="250" placeholder="Ejemplo: llamar antes de llegar"></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Confirmar pedido</button>
+                <p id="mensaje-pedido" class="mensaje-estado mensaje-error-general" role="status"></p>
+            </form>
+
+            <aside class="panel-resumen" aria-labelledby="titulo-resumen-pedido">
+                <h2 id="titulo-resumen-pedido">Resumen</h2>
+                <div id="resumen-pedido"></div>
+                <div class="resumen-total"><span>Total</span><strong id="total-pedido">$0</strong></div>
+                <p><a href="carrito.html">Volver a modificar cantidades</a></p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="pie-sitio"><div class="contenedor"><p>Ferretería Los Maestros · Proyecto académico DSY1104.</p></div></footer>
+
+    <script src="assets/js/datos.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/pedido.js"></script>
+</body>
+</html>

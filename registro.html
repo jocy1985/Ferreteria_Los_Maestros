@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro e inicio de sesión de clientes de Ferretería Los Maestros con validaciones JavaScript.">
+    <title>Registro / Inicio de sesión | Ferretería Los Maestros</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido-principal">Saltar al contenido principal</a>
+    <header class="cabecera-sitio">
+        <div class="contenedor cabecera-interior">
+            <a class="marca" href="index.html"><span>Ferretería Los Maestros</span></a>
+            <button id="boton-menu" class="boton-menu" type="button" aria-label="Abrir o cerrar menú principal" aria-controls="menu-principal" aria-expanded="false">☰</button>
+            <nav id="menu-principal" class="menu" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="carrito.html">Mi pedido <span id="contador-carrito" class="contador-carrito">0</span></a>
+                <a href="registro.html" aria-current="page">Registro/Inicio de sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido-principal" class="contenedor">
+        <header class="encabezado-pagina">
+            <p class="etiqueta">Clientes y contratistas</p>
+            <h1>Registro / Inicio de sesión</h1>
+            <p>Crea una cuenta nueva o ingresa si ya estás registrado.</p>
+        </header>
+
+        <div class="acceso-grid">
+            <section class="panel-acceso" aria-labelledby="titulo-registro">
+                <h2 id="titulo-registro">Registrarse</h2>
+                <p class="texto-suave">Completa tus datos para crear una cuenta.</p>
+
+                <form id="formulario-registro" class="formulario" novalidate>
+                    <fieldset>
+                        <legend>Datos personales</legend>
+
+                        <div class="campo-formulario">
+                            <label for="rut">RUT sin puntos ni guion</label>
+                            <input id="rut" name="rut" type="text" maxlength="9" aria-describedby="error-rut" autocomplete="off">
+                            <small id="error-rut" class="mensaje-error"></small>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="nombre">Nombre completo</label>
+                            <input id="nombre" name="nombre" type="text" maxlength="60" aria-describedby="error-nombre" autocomplete="name">
+                            <small id="error-nombre" class="mensaje-error"></small>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="correo">Correo electrónico</label>
+                            <input id="correo" name="correo" type="email" aria-describedby="error-correo" autocomplete="email">
+                            <small id="error-correo" class="mensaje-error"></small>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="telefono">Celular</label>
+                            <input id="telefono" name="telefono" type="tel" maxlength="9" placeholder="912345678" aria-describedby="error-telefono" autocomplete="tel">
+                            <small id="error-telefono" class="mensaje-error"></small>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="tipo-cliente">Tipo de cliente</label>
+                            <select id="tipo-cliente" name="tipoCliente" aria-describedby="error-tipo-cliente">
+                                <option value="">Seleccione una opción</option>
+                                <option value="Particular">Cliente particular</option>
+                                <option value="Contratista">Contratista / Maestro de obra</option>
+                            </select>
+                            <small id="error-tipo-cliente" class="mensaje-error"></small>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Clave de acceso</legend>
+                        <div class="campo-formulario">
+                            <label for="contrasena">Contraseña</label>
+                            <input id="contrasena" name="contrasena" type="password" maxlength="12" aria-describedby="error-contrasena" autocomplete="new-password">
+                            <small id="error-contrasena" class="mensaje-error"></small>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="repetir-contrasena">Repetir contraseña</label>
+                            <input id="repetir-contrasena" name="repetirContrasena" type="password" maxlength="12" aria-describedby="error-repetir-contrasena" autocomplete="new-password">
+                            <small id="error-repetir-contrasena" class="mensaje-error"></small>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit">Crear cuenta</button>
+                    <p id="mensaje-registro" class="mensaje-estado" role="status"></p>
+                </form>
+            </section>
+
+            <div class="separador-acceso" aria-hidden="true"></div>
+
+            <section class="panel-acceso" aria-labelledby="titulo-login">
+                <h2 id="titulo-login">Iniciar sesión</h2>
+                <p class="texto-suave">Ingresa con una cuenta registrada o utiliza uno de los usuarios de prueba.</p>
+
+                <form id="formulario-login" class="formulario formulario-login" novalidate>
+                    <fieldset>
+                        <legend>Datos de acceso</legend>
+
+                        <div class="campo-formulario">
+                            <label for="correo-login">Correo electrónico</label>
+                            <input id="correo-login" name="correoLogin" type="email" aria-describedby="error-correo-login" autocomplete="email">
+                            <small id="error-correo-login" class="mensaje-error"></small>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="contrasena-login">Contraseña</label>
+                            <input id="contrasena-login" name="contrasenaLogin" type="password" maxlength="12" aria-describedby="error-contrasena-login" autocomplete="current-password">
+                            <small id="error-contrasena-login" class="mensaje-error"></small>
+                        </div>
+                    </fieldset>
+
+                    <label class="opcion-recordarme" for="recordarme">
+                        <input id="recordarme" name="recordarme" type="checkbox">
+                        <span>Recuérdame</span>
+                    </label>
+
+                    <button type="submit">Iniciar sesión</button>
+                    <p id="mensaje-login" class="mensaje-estado" role="status"></p>
+                </form>
+            </section>
+        </div>
+
+        <section class="seccion-demo-roles" aria-labelledby="titulo-accesos">
+            <p class="etiqueta">Accesos disponibles</p>
+            <h2 id="titulo-accesos">Usuarios de acceso</h2>
+            <p>Utiliza estas cuentas en el formulario de inicio de sesión. Cada una abre el panel correspondiente.</p>
+            <div class="rejilla-roles">
+                <article class="tarjeta">
+                    <h3>Cliente / Contratista</h3>
+                    <p><strong>Correo:</strong> cliente@losmaestros.cl</p>
+                    <p><strong>Clave:</strong> cliente123</p>
+                    <p class="texto-suave">Acceso al área cliente con pedidos, historial y cuenta corriente.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Vendedor / Empleado</h3>
+                    <p><strong>Correo:</strong> empleado@losmaestros.cl</p>
+                    <p><strong>Clave:</strong> empleado123</p>
+                    <p class="texto-suave">Abre el panel interno con pedidos e inventario.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Administrador</h3>
+                    <p><strong>Correo:</strong> admin@losmaestros.cl</p>
+                    <p><strong>Clave:</strong> admin123</p>
+                    <p class="texto-suave">Acceso al panel de administración.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-sitio"><div class="contenedor"><p>Ferretería Los Maestros · Proyecto académico DSY1104.</p></div></footer>
+
+    <script src="assets/js/datos.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/registro.js"></script>
+</body>
+</html>
