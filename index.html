@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ferretería Los Maestros: materiales, herramientas y consulta de stock para contratistas y clientes.">
+    <title>Inicio | Ferretería Los Maestros</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido-principal">Saltar al contenido principal</a>
+
+    <header class="cabecera-sitio">
+        <div class="contenedor cabecera-interior">
+            <a class="marca" href="index.html">
+                <span>Ferretería Los Maestros</span>
+            </a>
+
+            <button id="boton-menu" class="boton-menu" type="button"
+                aria-label="Abrir o cerrar menú principal"
+                aria-controls="menu-principal" aria-expanded="false">☰</button>
+
+            <nav id="menu-principal" class="menu" aria-label="Navegación principal">
+                <a href="index.html" aria-current="page">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="carrito.html">Mi pedido <span id="contador-carrito" class="contador-carrito">0</span></a>
+                <a href="registro.html">Registro/Inicio de sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido-principal">
+        <section class="hero">
+            <div class="contenedor hero-contenido">
+                <div>
+                    <p class="etiqueta">Materiales y herramientas</p>
+                    <h1>Todo para hacer bien el trabajo</h1>
+                    <p>Consulta productos, precio y stock disponible antes de venir a la ferretería. Una experiencia simple pensada para maestros, contratistas y clientes particulares.</p>
+                    <div class="acciones">
+                        <a class="boton" href="catalogo.html">Ver productos</a>
+                        <a class="boton boton-secundario" href="carrito.html">Revisar mi pedido</a>
+                    </div>
+                </div>
+                <img src="assets/img/portada-herramientas.jpg" alt="Caja de herramientas con llaves, dados y destornilladores en un taller">
+            </div>
+        </section>
+
+        <section class="seccion contenedor" aria-labelledby="titulo-destacados">
+            <p class="etiqueta">Productos destacados</p>
+            <h2 id="titulo-destacados">Productos destacados</h2>
+            <div class="rejilla-destacados">
+                <article class="tarjeta">
+                    <img class="imagen-producto" src="assets/img/productos/cemento-25kg.jpg" alt="Saco de cemento Polpaico de 25 kg">
+                    <h3>Cemento gris 25 kg</h3>
+                    <p>Disponible para trabajos de construcción y reparación.</p>
+                    <a href="catalogo.html">Ver en catálogo</a>
+                </article>
+                <article class="tarjeta">
+                    <img class="imagen-producto" src="assets/img/productos/taladro-percutor.jpg" alt="Taladro percutor Makita">
+                    <h3>Taladro percutor 650 W</h3>
+                    <p>Herramienta eléctrica para perforaciones de uso general.</p>
+                    <a href="catalogo.html">Ver en catálogo</a>
+                </article>
+                <article class="tarjeta">
+                    <img class="imagen-producto" src="assets/img/productos/martillo-carpintero.jpg" alt="Martillo carpintero Stanley">
+                    <h3>Martillo carpintero 500 g</h3>
+                    <p>Herramienta manual de uso frecuente en obra y taller.</p>
+                    <a href="catalogo.html">Ver en catálogo</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-beneficios">
+            <div class="contenedor">
+                <p class="etiqueta">¿Necesitas ayuda?</p>
+                <h2 id="titulo-beneficios">Contáctanos si tienes dudas</h2>
+                <div class="rejilla-beneficios">
+                    <article class="tarjeta">
+                        <h3>Llámanos</h3>
+                        <p>Si necesitas confirmar stock, medidas o disponibilidad, comunícate con nosotros antes de venir.</p>
+                    </article>
+                    <article class="tarjeta">
+                        <h3>Haz tu consulta</h3>
+                        <p>Si buscas un producto específico o necesitas orientación, cuéntanos qué necesitas y te ayudamos.</p>
+                    </article>
+                    <article class="tarjeta">
+                        <h3>Visítanos</h3>
+                        <p>También puedes acercarte a la ferretería para recibir atención directa y revisar nuestros productos.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion contenedor" aria-labelledby="titulo-multimedia">
+            <p class="etiqueta">Información útil</p>
+            <h2 id="titulo-multimedia">Ubicación y seguridad</h2>
+            <div class="multimedia">
+                <div class="mapa">
+                    <h3>Ubicación de la ferretería</h3>
+                    <img
+                        class="mapa-imagen"
+                        src="assets/img/mapa-ferreteria-googlemaps.png"
+                        alt="Captura de Google Maps con la ubicación de la ferretería en Avenida Balmaceda, La Serena">
+                    <p class="texto-suave">Ubicación: Avenida Balmaceda 2100, La Serena.</p>
+                    <p><a href="https://www.google.com/maps?q=Avenida+Balmaceda+2100,+La+Serena,+Chile" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a></p>
+                </div>
+                <div>
+                    <h3>Seguridad en el trabajo</h3>
+                    <video class="video-local" controls preload="metadata">
+                        <source src="assets/video/seguridad-herramientas-manuales.mp4" type="video/mp4">
+                        Tu navegador no permite reproducir el video.
+                    </video>
+                    <p class="texto-suave">Revisa este video con recomendaciones de prevención de riesgos en el manejo de herramientas manuales.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-sitio">
+        <div class="contenedor pie-contenido">
+            <div>
+                <strong>Ferretería Los Maestros</strong>
+                <p>Proyecto académico DSY1104 · Desarrollo FullStack II.</p>
+            </div>
+            <div>
+                <strong>Atención</strong>
+                <p>Lunes a viernes: 08:30 a 18:30 hrs<br>Sábado: 09:00 a 14:00 hrs<br>Domingo: cerrado</p>
+            </div>
+            <div>
+                <strong>Enlaces</strong>
+                <p><a href="catalogo.html">Catálogo</a><br><a href="registro.html">Registro/Inicio de sesión</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/datos.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
