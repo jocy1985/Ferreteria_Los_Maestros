@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <meta name="description" content="Panel de empleado de Ferretería Los Maestros.">
+    <title>Panel empleado | Ferretería Los Maestros</title>
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido-principal">Saltar al contenido principal</a>
+    <header class="cabecera-sitio">
+        <div class="contenedor cabecera-interior">
+            <a class="marca" href="index.html"><span>Ferretería Los Maestros</span></a>
+            <button id="boton-menu" class="boton-menu" type="button" aria-label="Abrir o cerrar menú" aria-controls="menu-principal" aria-expanded="false">☰</button>
+            <nav id="menu-principal" class="menu" aria-label="Panel de empleado">
+                <a href="panel-empleado.html" aria-current="page">Panel empleado</a>
+                <a href="inventario.html">Inventario</a>
+                <a href="index.html">Ir al sitio público</a>
+            </nav>
+        </div>
+    </header>
+    <main id="contenido-principal" class="contenedor">
+        <header class="encabezado-pagina">
+            <p class="etiqueta">Vendedor / Empleado</p>
+            <h1>Panel de trabajo</h1>
+            <p>Revisa pedidos recientes, el estado del stock y los movimientos principales del día.</p>
+        </header>
+        <section aria-labelledby="titulo-resumen-empleado">
+            <h2 id="titulo-resumen-empleado">Resumen del día</h2>
+            <div class="rejilla-resumen">
+                <article class="tarjeta-resumen"><span class="dato-grande">4</span><h3>Pedidos pendientes</h3><p>Solicitudes por revisar.</p></article>
+                <article class="tarjeta-resumen"><span class="dato-grande">2</span><h3>Stock bajo</h3><p>Productos que requieren reposición.</p></article>
+                <article class="tarjeta-resumen"><span class="dato-grande">7</span><h3>Ventas registradas</h3><p>Operaciones ingresadas durante el día.</p></article>
+            </div>
+        </section>
+        <section class="seccion" aria-labelledby="titulo-pedidos-empleado">
+            <div class="encabezado-con-accion"><div><p class="etiqueta">Seguimiento</p><h2 id="titulo-pedidos-empleado">Pedidos recientes</h2></div><a class="boton" href="inventario.html">Revisar inventario</a></div>
+            <div class="tabla-contenedor">
+                <table>
+                    <caption>Pedidos recientes</caption>
+                    <thead><tr><th scope="col">Pedido</th><th scope="col">Cliente</th><th scope="col">Entrega</th><th scope="col">Estado</th></tr></thead>
+                    <tbody>
+                        <tr><td>#1048</td><td>Constructora Norte</td><td>Retiro</td><td><span class="estado estado-proceso">En preparación</span></td></tr>
+                        <tr><td>#1047</td><td>Cliente particular</td><td>Despacho</td><td><span class="estado estado-pendiente">Pendiente</span></td></tr>
+                        <tr><td>#1046</td><td>Maestro Carlos</td><td>Retiro</td><td><span class="estado estado-listo">Listo para retiro</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer class="pie-sitio"><div class="contenedor"><p>Ferretería Los Maestros · Panel de empleado.</p></div></footer>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
