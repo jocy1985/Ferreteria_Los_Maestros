@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Revisa y modifica los productos agregados a tu pedido en Ferretería Los Maestros.">
+    <title>Mi pedido | Ferretería Los Maestros</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido-principal">Saltar al contenido principal</a>
+    <header class="cabecera-sitio">
+        <div class="contenedor cabecera-interior">
+            <a class="marca" href="index.html"><span>Ferretería Los Maestros</span></a>
+            <button id="boton-menu" class="boton-menu" type="button" aria-label="Abrir o cerrar menú principal" aria-controls="menu-principal" aria-expanded="false">☰</button>
+            <nav id="menu-principal" class="menu" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="carrito.html" aria-current="page">Mi pedido <span id="contador-carrito" class="contador-carrito">0</span></a>
+                <a href="registro.html">Registro/Inicio de sesión</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido-principal" class="contenedor">
+        <header class="encabezado-pagina">
+            <p class="etiqueta">Revisa antes de confirmar</p>
+            <h1>Mi pedido</h1>
+            <p>Aumenta o disminuye cantidades y revisa el total.</p>
+        </header>
+
+        <p id="mensaje-carrito" class="mensaje-estado" role="status"></p>
+        <section id="lista-carrito" aria-label="Productos agregados"></section>
+
+        <section class="panel-resumen" aria-labelledby="titulo-total">
+            <div class="resumen-total">
+                <h2 id="titulo-total">Total</h2>
+                <strong id="total-carrito">$0</strong>
+            </div>
+            <div class="acciones">
+                <button id="vaciar-carrito" class="boton-secundario" type="button">Vaciar pedido</button>
+                <a id="continuar-pedido" class="boton" href="pedido.html">Continuar pedido</a>
+                <a class="boton boton-secundario" href="catalogo.html">Seguir comprando</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-sitio"><div class="contenedor"><p>Ferretería Los Maestros · Proyecto académico DSY1104.</p></div></footer>
+
+    <script src="assets/js/datos.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/carrito.js"></script>
+</body>
+</html>

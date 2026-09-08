@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <meta name="description" content="Panel de administración de Ferretería Los Maestros.">
+    <title>Panel administrador | Ferretería Los Maestros</title>
+</head>
+<body>
+    <a class="salto-contenido" href="#contenido-principal">Saltar al contenido principal</a>
+    <header class="cabecera-sitio">
+        <div class="contenedor cabecera-interior">
+            <a class="marca" href="index.html"><span>Ferretería Los Maestros</span></a>
+            <button id="boton-menu" class="boton-menu" type="button" aria-label="Abrir o cerrar menú" aria-controls="menu-principal" aria-expanded="false">☰</button>
+            <nav id="menu-principal" class="menu" aria-label="Panel de administración">
+                <a href="panel-admin.html" aria-current="page">Administración</a>
+                <a href="inventario.html">Inventario</a>
+                <a href="index.html">Ir al sitio público</a>
+            </nav>
+        </div>
+    </header>
+    <main id="contenido-principal" class="contenedor">
+        <header class="encabezado-pagina">
+            <p class="etiqueta">Administrador</p>
+            <h1>Panel de administración</h1>
+            <p>Gestiona usuarios, revisa alertas de stock y consulta la información general del sistema.</p>
+        </header>
+        <section aria-labelledby="titulo-resumen-admin">
+            <h2 id="titulo-resumen-admin">Resumen general</h2>
+            <div class="rejilla-resumen">
+                <article class="tarjeta-resumen"><span class="dato-grande">28</span><h3>Usuarios</h3><p>Clientes y personal registrados.</p></article>
+                <article class="tarjeta-resumen"><span class="dato-grande">4</span><h3>Pedidos pendientes</h3><p>Solicitudes por procesar.</p></article>
+                <article class="tarjeta-resumen"><span class="dato-grande">2</span><h3>Alertas de stock</h3><p>Productos bajo el mínimo.</p></article>
+            </div>
+        </section>
+        <section class="seccion" aria-labelledby="titulo-usuarios">
+            <h2 id="titulo-usuarios">Gestión de usuarios</h2>
+            <div class="tabla-contenedor">
+                <table>
+                    <caption>Usuarios registrados</caption>
+                    <thead><tr><th scope="col">Nombre</th><th scope="col">Rol</th><th scope="col">Estado</th><th scope="col">Acciones</th></tr></thead>
+                    <tbody>
+                        <tr><td>Ana Pérez</td><td>Administrador</td><td>Activo</td><td><button type="button" disabled>Editar</button> <button type="button" disabled>Desactivar</button></td></tr>
+                        <tr><td>Pedro Soto</td><td>Empleado</td><td>Activo</td><td><button type="button" disabled>Editar</button> <button type="button" disabled>Desactivar</button></td></tr>
+                        <tr><td>Constructora Norte</td><td>Contratista</td><td>Activo</td><td><button type="button" disabled>Editar</button> <button type="button" disabled>Desactivar</button></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="texto-suave">Revisa los usuarios registrados y sus roles dentro del sistema.</p>
+        </section>
+        <section class="seccion" aria-labelledby="titulo-reportes">
+            <h2 id="titulo-reportes">Reportes y accesos rápidos</h2>
+            <div class="rejilla-roles">
+                <article class="tarjeta"><h3>Inventario</h3><p>Revisar existencias y alertas de reposición.</p><a class="boton" href="inventario.html">Abrir inventario</a></article>
+                <article class="tarjeta"><h3>Productos más vendidos</h3><p>Resumen de productos con mayor movimiento en el período.</p></article>
+                <article class="tarjeta"><h3>Clientes frecuentes</h3><p>Listado de clientes y contratistas con mayor frecuencia de compra.</p></article>
+            </div>
+        </section>
+    </main>
+    <footer class="pie-sitio"><div class="contenedor"><p>Ferretería Los Maestros · Panel administrador.</p></div></footer>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
